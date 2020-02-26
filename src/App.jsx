@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import Datepicker from './components/Datepicker'
 
 function App() {
-  const [date, setDate] = useState(null)
+  // ここで日付の値を管理
+  // 初期値は本日の日付
+  const [date, setDate] = useState(new Date())
   return (
     <div>
+      {/* ↓`save`という名前で日付を更新する関数を渡す */}
       <Datepicker save={setDate} />
-      <p>{JSON.stringify(date)}</p>
+      {/* ↓stateに保存されている日付の値を表示 */}
+      <p>親コンポーネントのstateの値：{JSON.stringify(date)}</p>
     </div>
   );
 }
