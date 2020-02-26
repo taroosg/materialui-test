@@ -27,7 +27,7 @@ const Datepicker = props => {
           }}
         />
       </MuiPickersUtilsProvider>
-      {/* <p>{JSON.stringify(selectedDate)}</p> */}
+      <p>{JSON.stringify(selectedDate)}</p>
     </div>
   );
 }
